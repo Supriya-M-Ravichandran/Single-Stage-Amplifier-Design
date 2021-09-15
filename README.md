@@ -30,13 +30,13 @@ To design a differential-input single-ended output Single-Stage amplifier, using
 
 # DESIGN LAYOUT
 
-11111
+![image](https://user-images.githubusercontent.com/89927660/133513238-43f22d80-3b8f-4eff-9574-a0da165051e0.png)
 
 >_Firstly, DC analysis was performed to check if all the transistors were put into saturation region. This is essential to have a constant drain current, controlled by the gate-source voltage. The MOS device is useful only if operated in the saturation region._
 
 ## _Symbol_
 
-11111
+![image](https://user-images.githubusercontent.com/89927660/133513279-48dfc816-c529-44dd-aabd-a183e1590baf.png)
 
 # SELF BIASED CURRENT SOURCE CIRCUIT
 
@@ -46,15 +46,14 @@ After designing the amplifier to meet the desired specifications, in the final d
 
 ## _Schematic Layout_
 
-11111
+![image](https://user-images.githubusercontent.com/89927660/133513322-89bdb880-b3a1-4bb2-b2f2-b0075e2d0b8e.png)
 
 # SIMULATIONS
 
 ## _Offset Voltage_
 
 When real amplifiers are connected in unity gain configuration (output voltage is negative input voltage), there will be a voltage difference between the positive and negative inputs called the offset voltage of the amplifier. This Voff was obtained by performing DC analysis and annotating the node voltages. 
-
-11111
+![image](https://user-images.githubusercontent.com/89927660/133513360-a63e55a1-a628-4228-8b95-2de6e488623b.png)
 
 ### _Result: OFFSET VOLTAGE = 9.235mV_
 
@@ -62,7 +61,7 @@ When real amplifiers are connected in unity gain configuration (output voltage i
 
 Output voltage swing is the range of output voltages that allow linear operation of output signals. The output swing was simulated using two voltage-controlled voltage sources (VCVS) with voltage gain 0.5 and -0.5 respectively. A linear sweep on VS dc voltage from -100mV to 100mV was performed in the DC Analysis.
 
-11111
+![image](https://user-images.githubusercontent.com/89927660/133513411-7fd55ea7-9dfc-4efd-8510-e70e52a41e60.png)
 
 The waveform shows a finite DC range (output swing) that the amplifier has a high output resistance for high differential gain.
 OVSR = VO(max) – VO(min) = 1.32V – 220mV = 1.1 V
@@ -73,7 +72,7 @@ OVSR = VO(max) – VO(min) = 1.32V – 220mV = 1.1 V
 
 Differential Gain is the gain by which the amplifier boosts the difference of the input signals. The differential gain was obtained by performing AC Analysis, sweeping variable frequency from 1mHz to 1GHz.
 
-11111
+![image](https://user-images.githubusercontent.com/89927660/133513427-0662ac4e-eece-44f9-bbb0-67fc46d1a113.png)![image](https://user-images.githubusercontent.com/89927660/133513498-f8b56ab4-b72c-4f06-b663-64103ebf0749.png)
 
 ### _Result: DIFFERENTIAL MODE VOLTAGE GAIN = 80.9dB_
 
@@ -81,7 +80,7 @@ Differential Gain is the gain by which the amplifier boosts the difference of th
 
 GBW is the maximum frequency of the input signal that amplifier provides a voltage gain higher than 1 (magnitude of 0 dB in log scale). Phase Margin is the difference between the phase of the gain at 0 dB and 180º.
 
-11111
+![image](https://user-images.githubusercontent.com/89927660/133513527-cf51b099-d5a6-4b6a-8f8e-41f9fe0e0dcf.png)
 
 Frequency at 0 dB gives the GBW. 
 
@@ -95,7 +94,7 @@ f(GBW) = -95.1375º and Phase Margin (PM) = 180 + (-95.1375º) = 84.86º
 
 While the purpose of a differential amplifier is to amplify just the difference between the input signals, it also passes through some of the common-mode component of the input signal. The ability of amplifier to ignore the average of the two input signals is called the common mode rejection ratio (CMRR). Similar to differential gain AC response, the common mode gain was simulated. 
 
-11111
+![image](https://user-images.githubusercontent.com/89927660/133513551-800eb9f0-ac55-4b16-a1cb-0aaccdfa3bbb.png)![image](https://user-images.githubusercontent.com/89927660/133513565-bbc2b740-d62b-42a9-a4d9-859d98cb3a8d.png)
 
 ### _Result: Common Mode Gain = -34.1134º_
 
@@ -109,7 +108,7 @@ CMRR =  20 log⁡((Differential Mode Gain)/(Common Mode Gain))
 
 The concept of finding the Average Slew Rate lies on measuring how close the output voltage waveform follows the input voltage waveform. While the positive slew rate occurs when the signal is rising, the negative slew rate occurs when the signal is falling. Slew rate is not related to frequency response. To find the average slew rate, transient response was performed by having a square wave input with unity gain amplifier configuration. 
 
-11111
+![image](https://user-images.githubusercontent.com/89927660/133513601-494e37e2-bfe1-4db8-bc58-6795a603ce24.png)![image](https://user-images.githubusercontent.com/89927660/133513663-b8f3b085-80a2-42a5-9aa1-66b801d0179e.png)
 
 Average Slew Rate =  (positive SR + negative SR)/2 =  (10.298 + 10.3522)/2 
 = 10.3251 MV/S or 10.3251 V/μS
@@ -119,6 +118,8 @@ Average Slew Rate (SR) = 10.3251 V/us
 
 The total current includes from all current mirrors and current source also. Power is product of current and supply voltage. The total current was also verified using simulation. 
 
+![image](https://user-images.githubusercontent.com/89927660/133513693-3461afd9-0ae6-4ae0-acf9-1edcbc1d19b4.png)
+
 Power Dissipation (P_diss )= Sum of currents flowing through all branches × VDD
 						= 200.8 uA × 1.6 V 
 						= 0.321 mW
@@ -127,20 +128,3 @@ Power Dissipation (PDISS) = 0.321 mW
 # RESULTS 
 
 ![image](https://user-images.githubusercontent.com/89927660/132464470-93c167fb-d960-447a-82dc-9399d6281b98.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
