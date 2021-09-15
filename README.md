@@ -53,6 +53,7 @@ After designing the amplifier to meet the desired specifications, in the final d
 ## _Offset Voltage_
 
 When real amplifiers are connected in unity gain configuration (output voltage is negative input voltage), there will be a voltage difference between the positive and negative inputs called the offset voltage of the amplifier. This Voff was obtained by performing DC analysis and annotating the node voltages. 
+
 ![image](https://user-images.githubusercontent.com/89927660/133513360-a63e55a1-a628-4228-8b95-2de6e488623b.png)
 
 ### _Result: OFFSET VOLTAGE = 9.235mV_
@@ -72,7 +73,9 @@ OVSR = VO(max) – VO(min) = 1.32V – 220mV = 1.1 V
 
 Differential Gain is the gain by which the amplifier boosts the difference of the input signals. The differential gain was obtained by performing AC Analysis, sweeping variable frequency from 1mHz to 1GHz.
 
-![image](https://user-images.githubusercontent.com/89927660/133513427-0662ac4e-eece-44f9-bbb0-67fc46d1a113.png)![image](https://user-images.githubusercontent.com/89927660/133513498-f8b56ab4-b72c-4f06-b663-64103ebf0749.png)
+![image](https://user-images.githubusercontent.com/89927660/133513427-0662ac4e-eece-44f9-bbb0-67fc46d1a113.png)		
+
+![image](https://user-images.githubusercontent.com/89927660/133513498-f8b56ab4-b72c-4f06-b663-64103ebf0749.png)
 
 ### _Result: DIFFERENTIAL MODE VOLTAGE GAIN = 80.9dB_
 
@@ -94,7 +97,9 @@ f(GBW) = -95.1375º and Phase Margin (PM) = 180 + (-95.1375º) = 84.86º
 
 While the purpose of a differential amplifier is to amplify just the difference between the input signals, it also passes through some of the common-mode component of the input signal. The ability of amplifier to ignore the average of the two input signals is called the common mode rejection ratio (CMRR). Similar to differential gain AC response, the common mode gain was simulated. 
 
-![image](https://user-images.githubusercontent.com/89927660/133513551-800eb9f0-ac55-4b16-a1cb-0aaccdfa3bbb.png)![image](https://user-images.githubusercontent.com/89927660/133513565-bbc2b740-d62b-42a9-a4d9-859d98cb3a8d.png)
+![image](https://user-images.githubusercontent.com/89927660/133513551-800eb9f0-ac55-4b16-a1cb-0aaccdfa3bbb.png)
+
+![image](https://user-images.githubusercontent.com/89927660/133513565-bbc2b740-d62b-42a9-a4d9-859d98cb3a8d.png)
 
 ### _Result: Common Mode Gain = -34.1134º_
 
@@ -108,7 +113,9 @@ CMRR =  20 log⁡((Differential Mode Gain)/(Common Mode Gain))
 
 The concept of finding the Average Slew Rate lies on measuring how close the output voltage waveform follows the input voltage waveform. While the positive slew rate occurs when the signal is rising, the negative slew rate occurs when the signal is falling. Slew rate is not related to frequency response. To find the average slew rate, transient response was performed by having a square wave input with unity gain amplifier configuration. 
 
-![image](https://user-images.githubusercontent.com/89927660/133513601-494e37e2-bfe1-4db8-bc58-6795a603ce24.png)![image](https://user-images.githubusercontent.com/89927660/133513663-b8f3b085-80a2-42a5-9aa1-66b801d0179e.png)
+![image](https://user-images.githubusercontent.com/89927660/133513601-494e37e2-bfe1-4db8-bc58-6795a603ce24.png)
+
+![image](https://user-images.githubusercontent.com/89927660/133513663-b8f3b085-80a2-42a5-9aa1-66b801d0179e.png)
 
 Average Slew Rate =  (positive SR + negative SR)/2 =  (10.298 + 10.3522)/2 
 = 10.3251 MV/S or 10.3251 V/μS
